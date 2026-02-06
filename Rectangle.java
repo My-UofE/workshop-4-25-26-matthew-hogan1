@@ -23,6 +23,10 @@ public class Rectangle {
   public Rectangle(double width, double height) {
       this(width, height, 0, 0);
   }
+
+  public Rectangle(){
+    this(1,1,0,0);
+  }
   // method: move the rectangle
   public void move(double dx, double dy) {
 	   originX += dx;
