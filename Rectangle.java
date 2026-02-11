@@ -27,6 +27,17 @@ public class Rectangle {
   public Rectangle(){
     this(1,1,0,0);
   }
+  
+  public void scale(double scaleX,double scaleY){
+    this.width = this.width * scaleX;
+    this.height = this.height * scaleY;
+  }
+
+  public void scale(double scaler){
+    this.width = this.width * scaler;
+    this.height = this.height * scaler;
+  }
+
   // method: move the rectangle
   public void move(double dx, double dy) {
 	   originX += dx;
@@ -43,4 +54,12 @@ public class Rectangle {
     return 2 * (width + height);
   }
   
+  public boolean isOverlappedWith(Rectangle r){
+
+    if (this.originY <= (r.originY-r.height)) & ((this.originY - this.width) <= r.originY) & (this.originX <= (r.originX + r.width)) & ((this.originX + this.width) >= r.originX){
+      return True
+    }
+
+    
+  }
 }
